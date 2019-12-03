@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Factory {
-    Map<String, Integer> warehouseShipDuration;
+    private final Map<String, Integer> warehouseShipDuration;
 
     public Factory() {
         this.warehouseShipDuration = new HashMap<>();
@@ -13,9 +13,6 @@ public class Factory {
     }
 
     public int shipTo(String warehouse) {
-
-        if ("A".equals(warehouse))
-            return 5;
-        return 4;
+        return warehouseShipDuration.get(warehouse);
     }
 }
