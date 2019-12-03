@@ -15,6 +15,10 @@ public class Factory {
     public int shipTo(String warehouse) {
         if (warehouse.equals("BB"))
             return 4;
+        return shipOneContainer(warehouse);
+    }
+
+    private Integer shipOneContainer(String warehouse) {
         return warehouseShipDuration.get(warehouse);
     }
 }
