@@ -46,4 +46,12 @@ public class FactoryTest {
         //Then
         assertThat(result).isEqualTo(5);
     }
+
+    @Test
+    public void shipping_three_containers_to_warehouse_B_should_take_12_hours() {
+        //When
+        int result = factory.shipTo("BBB");
+        //Then
+        assertThat(result).isEqualTo(12);
+    }
 }
