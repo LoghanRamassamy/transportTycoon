@@ -15,7 +15,7 @@ public class Factory {
     public int shipTo(String warehouses) {
         int totalDuration = 0;
         for (char warehouse : warehouses.toCharArray()) {
-            totalDuration = shipOneContainerTo(warehouse);
+            totalDuration = Math.max(shipOneContainerTo(warehouse), totalDuration);
         }
         return totalDuration;
     }
