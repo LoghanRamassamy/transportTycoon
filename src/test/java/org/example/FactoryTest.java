@@ -9,7 +9,7 @@ public class FactoryTest {
         //Given
         Factory factory = new Factory();
         //When
-        int result = factory.ship("B");
+        int result = factory.shipTo("B");
         //Then
         Assertions.assertThat(result).isEqualTo(4);
     }
@@ -19,7 +19,7 @@ public class FactoryTest {
         //Given
         Factory factory = new Factory();
         //When
-        int result = factory.ship("A");
+        int result = factory.shipTo("A");
         //Then
         Assertions.assertThat(result).isEqualTo(5);
     }
