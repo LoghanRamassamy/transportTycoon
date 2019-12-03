@@ -3,6 +3,8 @@ package org.example;
 import java.util.HashMap;
 import java.util.Map;
 
+import static java.lang.Math.max;
+
 public class Factory {
     private final Map<Character, Integer> warehouseShipDuration;
 
@@ -15,7 +17,7 @@ public class Factory {
     public int shipTo(String warehouses) {
         int totalDuration = 0;
         for (char warehouse : warehouses.toCharArray()) {
-            totalDuration = Math.max(shipOneContainerTo(warehouse), totalDuration);
+            totalDuration = max(shipOneContainerTo(warehouse), totalDuration);
         }
         return totalDuration;
     }
