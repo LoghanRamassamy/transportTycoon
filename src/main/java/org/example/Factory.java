@@ -18,7 +18,7 @@ public class Factory {
         return shipOneContainerTo(warehouses);
     }
 
-    private Integer shipOneContainerTo(String warehouse) {
+    private int shipOneContainerTo(String warehouse) {
         return warehouseShipDuration.get(warehouse);
     }
 }
