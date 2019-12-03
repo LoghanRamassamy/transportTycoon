@@ -13,4 +13,14 @@ public class FactoryTest {
         //Then
         Assertions.assertThat(result).isEqualTo(4);
     }
+
+    @Test
+    public void shipping_one_container_to_warehouse_A_should_take_5_hours() {
+        //Given
+        Factory factory = new Factory();
+        //When
+        int result = factory.ship("A");
+        //Then
+        Assertions.assertThat(result).isEqualTo(5);
+    }
 }
