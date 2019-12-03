@@ -1,14 +1,22 @@
 package org.example;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class FactoryTest {
+
+    private Factory factory;
+
+    @BeforeEach
+    void setUp() {
+        //Given
+        factory = new Factory();
+    }
+
     @Test
     public void shipping_one_container_to_warehouse_B_should_take_4_hours() {
-        //Given
-        Factory factory = new Factory();
         //When
         int result = factory.shipTo("B");
         //Then
@@ -17,8 +25,6 @@ public class FactoryTest {
 
     @Test
     public void shipping_one_container_to_warehouse_A_should_take_5_hours() {
-        //Given
-        Factory factory = new Factory();
         //When
         int result = factory.shipTo("A");
         //Then
