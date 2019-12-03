@@ -4,12 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Factory {
-    Map<String, Integer> hm;
+    Map<String, Integer> warehouseShipDuration;
 
     public Factory() {
-        this.hm = new HashMap<>();
-        hm.put("A", 5);
-        hm.put("B", 4);
+        this.warehouseShipDuration = new HashMap<>();
+        warehouseShipDuration.put("A", 5);
+        warehouseShipDuration.put("B", 4);
     }
 
     public int shipTo(String warehouse) {
