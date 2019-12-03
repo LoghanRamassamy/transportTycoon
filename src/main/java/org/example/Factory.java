@@ -12,13 +12,13 @@ public class Factory {
         warehouseShipDuration.put("B", 4);
     }
 
-    public int shipTo(String warehouse) {
-        if (warehouse.equals("BB"))
+    public int shipTo(String warehouses) {
+        if (warehouses.equals("BB"))
             return 4;
-        return shipOneContainer(warehouse);
+        return shipOneContainerTo(warehouses);
     }
 
-    private Integer shipOneContainer(String warehouse) {
+    private Integer shipOneContainerTo(String warehouse) {
         return warehouseShipDuration.get(warehouse);
     }
 }
