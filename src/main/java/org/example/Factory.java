@@ -13,9 +13,11 @@ public class Factory {
     }
 
     public int shipTo(String warehouses) {
-        if (warehouses.equals("BB"))
-            return 4;
-        return shipOneContainerTo(warehouses);
+        int totalDuration = 0;
+        for (int i = 0; i < warehouses.length(); i++) {
+            totalDuration = shipOneContainerTo(String.valueOf(warehouses.charAt(i)));
+        }
+        return totalDuration;
     }
 
     private int shipOneContainerTo(String warehouse) {
