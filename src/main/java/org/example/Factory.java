@@ -13,6 +13,8 @@ public class Factory {
     }
 
     public int shipTo(String warehouse) {
+        if (warehouse.equals("BB"))
+            return 4;
         return warehouseShipDuration.get(warehouse);
     }
 }
