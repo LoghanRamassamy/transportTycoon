@@ -5,6 +5,8 @@ package org.example;
  */
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Factory factory = new Factory();
+        int duration = factory.ship(args[0]);
+        System.out.println("Containers " + args[0] + " were delivered in " + duration + " hours.");
     }
 }
