@@ -1,7 +1,8 @@
 package org.example;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class FactoryTest {
     @Test
@@ -11,7 +12,7 @@ public class FactoryTest {
         //When
         int result = factory.shipTo("B");
         //Then
-        Assertions.assertThat(result).isEqualTo(4);
+        assertThat(result).isEqualTo(4);
     }
 
     @Test
@@ -21,6 +22,6 @@ public class FactoryTest {
         //When
         int result = factory.shipTo("A");
         //Then
-        Assertions.assertThat(result).isEqualTo(5);
+        assertThat(result).isEqualTo(5);
     }
 }
