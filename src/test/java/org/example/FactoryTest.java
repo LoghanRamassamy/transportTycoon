@@ -32,7 +32,7 @@ public class FactoryTest {
     }
 
     @Test
-    public void shipping_two_containers_to_warehouse_BB_should_take_4_hours() {
+    public void shipping_two_containers_to_warehouse_B_should_take_4_hours() {
         //When
         int result = factory.shipTo("BB");
         //Then
@@ -40,7 +40,7 @@ public class FactoryTest {
     }
 
     @Test
-    public void shipping_two_containers_to_warehouse_AB_should_take_5_hours() {
+    public void shipping_two_containers_to_warehouses_AB_should_take_5_hours() {
         //When
         int result = factory.shipTo("AB");
         //Then
