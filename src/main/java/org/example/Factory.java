@@ -14,8 +14,8 @@ public class Factory {
 
     public int shipTo(String warehouses) {
         int totalDuration = 0;
-        for (int i = 0; i < warehouses.length(); i++) {
-            totalDuration = shipOneContainerTo(warehouses.charAt(i));
+        for (char warehouse : warehouses.toCharArray()) {
+            totalDuration = shipOneContainerTo(warehouse);
         }
         return totalDuration;
     }
