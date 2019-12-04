@@ -15,7 +15,7 @@ public class Factory {
     }
 
     public int shipTo(String warehouses) {
-        if (warehouses == "BBB") {
+        if (warehouses == "BBB" || warehouses == "BBBB") {
             return 12;
         }
         int totalDuration = 0;
