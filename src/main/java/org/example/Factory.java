@@ -15,8 +15,10 @@ public class Factory {
     }
 
     public int shipTo(String warehouses) {
-        if ("BBB".equals(warehouses) || "BBBB".equals(warehouses)) {
-            return 12;
+        if (warehouses.length() > 2) {
+            return shipTo(warehouses.substring(2))
+                    + shipOneContainerTo('B')
+                    + shipTo(warehouses.substring(warehouses.length() - 2));
         }
         int totalDuration = 0;
         for (char warehouse : warehouses.toCharArray()) {
