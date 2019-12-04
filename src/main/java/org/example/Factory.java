@@ -17,9 +17,9 @@ public class Factory {
 
     public int shipTo(String warehouses) {
         if (warehouses.length() > NUMBER_OF_VEHICULES) {
-            return shipTo(warehouses.substring(NUMBER_OF_VEHICULES))
+            return shipTo(warehouses.substring(0, NUMBER_OF_VEHICULES))
                     + shipOneContainerTo('B')
-                    + shipTo(warehouses.substring(warehouses.length() - NUMBER_OF_VEHICULES));
+                    + shipTo(warehouses.substring(NUMBER_OF_VEHICULES));
         }
         int totalDuration = 0;
         for (char warehouse : warehouses.toCharArray()) {

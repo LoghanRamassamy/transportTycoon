@@ -25,12 +25,16 @@ public class FactoryTest {
         assertThat(result).isEqualTo(5);
     }
 
-    @Test
-    public void shipping_two_containers_to_warehouses_AB_should_take_5_hours() {
+    @ParameterizedTest
+    @CsvSource({
+            "AB, 5",
+            "BBA, 13"
+    })
+    public void shipping_two_containers_to_warehouses_AB_should_take_5_hours(String numberOfContainers, int expected) {
         // When
-        int result = factory.shipTo("AB");
+        int result = factory.shipTo(numberOfContainers);
         // Then
-        assertThat(result).isEqualTo(5);
+        assertThat(result).isEqualTo(expected);
     }
 
     @ParameterizedTest
