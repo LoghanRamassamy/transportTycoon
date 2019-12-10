@@ -55,7 +55,6 @@ public class FactoryTest {
     @ParameterizedTest
     @CsvSource({
             "AA, 13"
-
     })
     public void shipping_n_containers_to_warehouse_A_should_take_p_hours(String numberOfContainers, int expected) {
         // When

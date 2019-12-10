@@ -11,7 +11,7 @@ public class Factory {
 
     public Factory() {
         this.warehouseShipDuration = new HashMap<>();
-        warehouseShipDuration.put('A', 5);
+        warehouseShipDuration.put('A', 1 + 4);
         warehouseShipDuration.put('B', 4);
     }
 
